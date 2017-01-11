@@ -5,12 +5,12 @@ import time
 import Adafruit_CharLCD as LCD
 
 # Raspberry Pi pin configuration:
-lcd_rs        = 21  # Note this might need to be changed to 21 for older revision Pi's.
+lcd_rs        = 25
 lcd_en        = 24
 lcd_d4        = 23
 lcd_d5        = 17
 lcd_d6        = 21
-lcd_d7        = 12
+lcd_d7        = 22
 
 # Define LCD column and row size for 16x2 LCD.
 lcd_columns = 16
