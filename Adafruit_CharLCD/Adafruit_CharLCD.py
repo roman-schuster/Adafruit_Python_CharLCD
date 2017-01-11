@@ -68,12 +68,16 @@ LCD_5x8DOTS             = 0x00
 LCD_ROW_OFFSETS         = (0x00, 0x40, 0x14, 0x54)
 
 # Char LCD plate GPIO numbers.
-LCD_PLATE_RS            = 25 # Register Select
-LCD_PLATE_EN            = 24 # Clock
-LCD_PLATE_D4            = 23 
-LCD_PLATE_D5            = 17
-LCD_PLATE_D6            = 21
-LCD_PLATE_D7            = 22
+LCD_PLATE_RS            = 15
+LCD_PLATE_RW            = 14
+LCD_PLATE_EN            = 13 
+LCD_PLATE_D4            = 12
+LCD_PLATE_D5            = 11
+LCD_PLATE_D6            = 10
+LCD_PLATE_D7            = 9
+LCD_PLATE_RED           = 6
+LCD_PLATE_GREEN         = 7
+LCD_PLATE_BLUE          = 8
 
 # Char LCD plate button names.
 SELECT                  = 0
