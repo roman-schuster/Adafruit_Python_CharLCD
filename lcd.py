@@ -1,7 +1,6 @@
 #!/usr/bin/python
-# Example using a character LCD connected to a Raspberry Pi or BeagleBone Black.
-import time
 
+import time
 import Adafruit_CharLCD as LCD
 from googlefinance import getQuotes
 
@@ -33,4 +32,3 @@ while True:
         msg = ticker + ': ' + price + '\nat ' + myTime
         lcd.message(msg)
         time.sleep(2.0)
-
