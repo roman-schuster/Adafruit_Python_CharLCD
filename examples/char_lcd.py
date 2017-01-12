@@ -61,5 +61,6 @@ time.sleep(5.0)
 lcd.clear()
 ticker = 'AAPL'
 price = getQuotes(ticker)[0]['LastTradePrice']
-msg = ticker + ': ' + price
+time = getQuotes(ticker)[0]['LastTradeTime']
+msg = ticker + ': ' + price + '\nat ' + time
 lcd.message(msg)
