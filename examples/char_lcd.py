@@ -22,10 +22,10 @@ lcd = LCD.Adafruit_CharLCD(lcd_rs, lcd_en, lcd_d4, lcd_d5, lcd_d6, lcd_d7,
                            lcd_columns, lcd_rows)
 
 # Print a two line message
-lcd.message('It works! Now look\nlook @ cute bear')
+#lcd.message('It works! Now look\nlook @ cute bear')
 
 # Wait 5 seconds
-time.sleep(5.0)
+#time.sleep(5.0)
 
 # Demo showing the cursor.
 #lcd.clear()
@@ -59,8 +59,14 @@ time.sleep(5.0)
 
 # Change message.
 lcd.clear()
-ticker = 'AAPL'
-price = getQuotes(ticker)[0]['LastTradePrice']
-time = getQuotes(ticker)[0]['LastTradeTime']
-msg = ticker + ': ' + price + '\nat ' + time
-lcd.message(msg)
+tickers = ['AAPL', 'GS', 'DB', 'GORO']
+
+for ticker in tickers:
+    lcd.clear()
+    json = getQuotes(ticker)[0]
+    price = json['LastTradePrice']
+    myTimet = json['LastTradeTime']
+    msg = ticker + ': ' + price + '\nat ' + myTime
+    lcd.message(msg)
+    time.sleep(2.0)
+
