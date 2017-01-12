@@ -61,12 +61,13 @@ lcd = LCD.Adafruit_CharLCD(lcd_rs, lcd_en, lcd_d4, lcd_d5, lcd_d6, lcd_d7,
 lcd.clear()
 tickers = ['AAPL', 'GS', 'DB', 'GORO']
 
-for ticker in tickers:
-    lcd.clear()
-    json = getQuotes(ticker)[0]
-    price = json['LastTradePrice']
-    myTime = json['LastTradeTime']
-    msg = ticker + ': ' + price + '\nat ' + myTime
-    lcd.message(msg)
-    time.sleep(2.0)
+while True:
+    for ticker in tickers:
+        lcd.clear()
+        json = getQuotes(ticker)[0]
+        price = json['LastTradePrice']
+        myTime = json['LastTradeTime']
+        msg = ticker + ': ' + price + '\nat ' + myTime
+        lcd.message(msg)
+        time.sleep(2.0)
 
