@@ -21,52 +21,15 @@ lcd_rows    = 2
 lcd = LCD.Adafruit_CharLCD(lcd_rs, lcd_en, lcd_d4, lcd_d5, lcd_d6, lcd_d7,
                            lcd_columns, lcd_rows)
 
-# Print a two line message
-#lcd.message('It works! Now look\nlook @ cute bear')
-
-# Wait 5 seconds
-#time.sleep(5.0)
-
-# Demo showing the cursor.
-#lcd.clear()
-#lcd.show_cursor(True)
-#lcd.message('Show cursor')
-
-#time.sleep(5.0)
-
-# Demo showing the blinking cursor.
-#lcd.clear()
-#lcd.blink(True)
-#lcd.message('Blink cursor')
-
-#time.sleep(5.0)
-
-# Stop blinking and showing cursor.
-#lcd.show_cursor(False)
-#lcd.blink(False)
-
-# Demo scrolling message right/left.
-#lcd.clear()
-#message = 'Scroll'
-#lcd.message(message)
-#for i in range(lcd_columns-len(message)):
-#    time.sleep(0.5)
-#    lcd.move_right()
-#for i in range(lcd_columns-len(message)):
-#    time.sleep(0.5)
-#    lcd.move_left()
-
-
-# Change message.
-lcd.clear()
+# Printing some messages
 tickers = ['AAPL', 'GS', 'DB', 'GORO']
 
 while True:
     for ticker in tickers:
         lcd.clear()
-        json = getQuotes(ticker)[0]
-        price = json['LastTradePrice']
-        myTime = json['LastTradeTime']
+        ticker_json = getQuotes(ticker)[0]
+        price = ticker_json['LastTradePrice']
+        myTime = ticker_json['LastTradeTime']
         msg = ticker + ': ' + price + '\nat ' + myTime
         lcd.message(msg)
         time.sleep(2.0)
