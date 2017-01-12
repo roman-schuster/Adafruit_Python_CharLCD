@@ -58,4 +58,5 @@ time.sleep(5.0)
 
 # Change message.
 lcd.clear()
-lcd.message('5 + 5 =', str(5+5), '\nbye')
+aVariable = 'testing\n1, 2, 3 testing'
+lcd.message(aVariable)
