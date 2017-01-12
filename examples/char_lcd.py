@@ -3,6 +3,7 @@
 import time
 
 import Adafruit_CharLCD as LCD
+from googlefinance import getQuotes
 
 # Raspberry Pi pin configuration:
 lcd_rs        = 25
@@ -58,5 +59,7 @@ time.sleep(5.0)
 
 # Change message.
 lcd.clear()
-aVariable = 'testing\n1, 2, 3 testing'
-lcd.message(aVariable)
+ticker = 'AAPL'
+price = getQuotes(ticker)[0]['LastTradePrice']
+msg = ticker + ': ' + price
+lcd.message(msg)
