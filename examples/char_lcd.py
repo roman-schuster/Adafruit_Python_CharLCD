@@ -65,7 +65,7 @@ for ticker in tickers:
     lcd.clear()
     json = getQuotes(ticker)[0]
     price = json['LastTradePrice']
-    myTimet = json['LastTradeTime']
+    myTime = json['LastTradeTime']
     msg = ticker + ': ' + price + '\nat ' + myTime
     lcd.message(msg)
     time.sleep(2.0)
