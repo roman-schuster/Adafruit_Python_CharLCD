@@ -4,6 +4,12 @@ import time
 import Adafruit_CharLCD as LCD
 from googlefinance import getQuotes
 
+from oauth2client.client import flow_from_clientsecrets
+FLOW = flow_from_clientsecrets(
+    CLIENT_SECRETS,
+    scope = 'https://www.googleapis.com/auth/analytics.readonly',
+    message = '%s is missing' % CLIENT_SECRETS)
+
 # Raspberry Pi pin configuration:
 lcd_rs        = 25
 lcd_en        = 24
