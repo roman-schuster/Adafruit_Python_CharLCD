@@ -1,6 +1,8 @@
 #!/bin/bash
 # Smart Scale Prototype 1.0
 
+GOOGLE_APPLICATION_CREDENTIALS='/home/pi/Adafruit_Python_CharLCD'
+
 CURRENTDIR=$(pwd)
 CHECK4WAV=$(find $CURRENTDIR -name speech.wav | wc -l)
 CHECK4FLAC=$(find $CURRENTDIR -name speech.flac | wc -l)
