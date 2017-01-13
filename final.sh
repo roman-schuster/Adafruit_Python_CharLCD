@@ -32,7 +32,7 @@ sox speech.wav speech.flac
 
 CHECK4FLAC=$(find $CURRENTDIR -name speech.flac | wc -l)
 
-if [ $CHECK4FLAC == 1 }; then
+if [ $CHECK4FLAC == 1 ]; then
     echo "FLAC successfully created"
 fi
 
