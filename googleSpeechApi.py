@@ -46,6 +46,11 @@ def main(speech_file):
                 }
             })
     response = service_request.execute()
+    
+    text_file = open("/home/pi/Adafruit_Python_CharLCD/speech_text.txt", "w")
+    text_file.write(json.dumps(response))
+    text_file.close()
+    
     print(json.dumps(response))
 
 
