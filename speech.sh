@@ -28,7 +28,7 @@ if [ $CHECK4WAV == 1 ]; then
     echo "Finished Recording"
 fi
 
-sox test.wav test.flac
+sox speech.wav speech.flac
 
 CHECK4FLAC=$(find $CURRENTDIR -name speech.flac | wc -l)
 
