@@ -36,4 +36,6 @@ if [ $CHECK4FLAC == 1 ]; then
     echo "FLAC successfully created"
 fi
 
+sudo python googleSpeechApi.py
+
 
