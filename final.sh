@@ -36,6 +36,8 @@ if [ $CHECK4FLAC == 1 ]; then
     echo "FLAC successfully created"
 fi
 
-sudo python googleSpeechApi.py
+export GOOGLE_APPLICATION_CREDENTIALS='/home/pi/Adafruit_Python_CharLCD/Smart Scale 1-9857f1adb443.json'
+
+sudo python googleSpeechApi.py speech.flac
 
 
