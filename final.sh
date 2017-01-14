@@ -1,7 +1,8 @@
 #!/bin/bash
 # Smart Scale Prototype 1.0
 
-GOOGLE_APPLICATION_CREDENTIALS='/home/pi/Adafruit_Python_CharLCD/Smart Scale 1-9857f1adb443.json'
+export GOOGLE_APPLICATION_CREDENTIALS='/Users/roman/Desktop/Smart Scale 1-73e4f13b6ab0.json'
+export GCLOUD_PROJECT='Smart Scale 1'
 
 CURRENTDIR=$(pwd)
 CHECK4WAV=$(find $CURRENTDIR -name speech.wav | wc -l)
